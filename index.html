@@ -12,7 +12,7 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="pin-generator half-width">
-                    <input id="generate-input" class="form-control" type="text">
+                    <input id="generate-input" class="form-control" type="text" placeholder="0">
                     <button id="generate-button" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <form action="" name="form">
                 <div class="input-section half-width">
-                    <input id="pin-input" class="form-control" type="text" name="display">
+                    <input id="pin-input" class="form-control" type="text" name="display" placeholder="0">
                     <div class="numbers">
                         <div class="calc-body">
                             <div class="calc-button-row">
@@ -77,10 +77,15 @@
 
               if(pinType == generateInputValue){
                   document.getElementById("pin-match").style.display = "block";
-                  
+                  document.getElementById("didnot-pin").style.display = "none";
+                  document.getElementById("generate-input").value = "";
+                  document.getElementById("pin-input").value = "";
               }
               else{
                   document.getElementById("didnot-pin").style.display = "block";
+                  document.getElementById("pin-match").style.display = "none";
+                  document.getElementById("generate-input").value = "";
+                  document.getElementById("pin-input").value = "";
               }
           });
                 
